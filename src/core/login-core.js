@@ -44,6 +44,7 @@ function sendTokenWithEmail(email, token) {
       return true;
     })
     .catch(error => {
+      console.log(error);
       console.log("Error sending mail");
       console.log(error.response.statusCode);
       return false;
