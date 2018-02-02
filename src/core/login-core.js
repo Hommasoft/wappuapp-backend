@@ -28,13 +28,12 @@ function sendTokenWithEmail(email, token) {
         }
       ],
       from: {
-        email: "admin@whappuapp"
+        email: process.env.EMAIL_ADDRESS
       },
       content: [
         {
           type: "text/plain",
-          value:
-            "http://addresstotheadminpanel.asd/activateaccount?token=" + token
+          value: process.env.FRONTEND_URI + "/activateaccount?token=" + token
         }
       ]
     }
